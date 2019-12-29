@@ -4,54 +4,35 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *get_secret(unsigned int code);
+char *get_secret(int code);
 
 int main(void) {
 
-  unsigned int code;
+  int code;
   char *secret;
 
 
   printf("CODE? ");
-  scanf("&d", &code);
+  scanf("%d", &code);
 
   secret = get_secret(code);
   printf("Your secret is \"%s\"\n", secret);
 
-  free(secret);
-
   return 0;
 }
 
-char *get_secret(unsigned int code) {
-
-
-  char *temp = "";
-
-  if(code == 7849) {
-    strcpy(temp, "CONSUMER\0");
-  } else if (code == 1337) {
-    strcpy(temp, "GRIP\0");
-  } else if (code == 2648) {
-    strcpy(temp, "SAMPLE\0");
-  }
-
+char *get_secret(int code) {
   char *secret;
-  secret = (char *) malloc(strlen(temp) + 1); // allocate a block of memory with the size of "temp", NOT pointing temp to secret
 
-  // debug
-  printf("value of temp: %s\n", temp);
-  printf("&temp: 0x%X\n", &temp);
-  printf("value of secret: 0x%X\n", *secret);
-
-  printf("length of temp: %zu\n", strlen(temp));
-  printf("length of secret: %zu\n", strlen(secret));
-
-  if(secret == NULL) {
-    printf("Error: malloc failed to allocate memory.\n");
-    exit(EXIT_FAILURE);
+  if (code == 7849) {
+    secret = "CONSUMER";
+  } else if (code == 1337) {
+    secret = "GRIP";
+  } else if (code == 2648) {
+    secret = "SAMPLE";
+  } else {
+    secret = "***********";
   }
 
-  strcpy(secret, temp);
   return secret;
 }
