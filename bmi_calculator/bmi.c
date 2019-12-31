@@ -1,34 +1,61 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "bmi.h"
 
-#define TRUE 1
-#define CLRSCR system("@cls || clear");
+void calculate_bmi_imperial() {
+    UserInfo user_info;
+    float ft, in;
 
-int main(void) {
+    printf("---\n");
+    printf("Enter your weight (lbs): ");
+    scanf(" %f", &user_info.weight);
+    printf("Enter your height:\n");
+    printf(" Feet: ");
+    scanf(" %f", &ft);
+    printf(" Inches: ");
+    scanf(" %f", &in);
 
-	int unit_choice;
-	char continue_choice;
+    user_info.height = convert_ft_to_in(ft, in);
 
-	CLRSCR
+    // calculate BMI
+    user_info.bmi = 703 * (user_info.weight / (user_info. height * user_info.height));
+    print_result(user_info.bmi);
+}
 
-	printf("BMI Calculator\n");
-	printf("---\n");	
+void calculate_bmi_metric() {
+    UserInfo user_info;
 
-	while(TRUE) {
-		printf(" 1. Imperial Unit\n");
-		printf(" 2. Metric Unit\n");
-		printf("\n");
-		printf("Select: ");
-		scanf(" %d", &unit_choice);
+    printf("---\n");
+    printf("Enter your weight (kg): ");
+    scanf(" %f", &user_info.weight);
+    printf("Enter your height (m): ");
+    scanf(" %f", &user_info.height);
 
-		// continue or exit
-		printf("Continue? (please enter y or n) ");
-		scanf(" %c", &continue_choice);
+    // calculate BMI
+    user_info.bmi = user_info.weight / (user_info.height * user_info.height);
+    print_result(user_info.bmi);
+}
 
-		if(continue_choice == 'n' || continue_choice == 'N')
-			break;
-	};
+char * get_bmi_status(float bmi) {
+    char *status;
 
-	//CLRSCR
-	return 0;
+    if(bmi < 18.5) 
+        status = "UNDERWEIGHT";
+    else if (bmi >= 18.5 && bmi <= 24.9)
+        status = "HEALTHY";
+    else if (bmi > 24.9 && bmi < 29.9)
+        status = "OVERWEIGHT";
+    else if (bmi > 30.0)
+        status = "OBESITY";
+
+    return status;
+}
+
+float convert_ft_to_in(float ft, float in) {
+    return (ft * 12) + in;
+}
+
+void print_result(float bmi) {
+    printf("\n");
+    printf("Your BMI is %.2f\n", bmi);
+    printf("Your are in \"%s\" range\n", get_bmi_status(bmi));    
 }
