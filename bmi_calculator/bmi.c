@@ -18,6 +18,8 @@ void calculate_bmi_imperial() {
 
     // calculate BMI
     user_info.bmi = 703 * (user_info.weight / (user_info. height * user_info.height));
+
+    printf("\n");
     print_result(user_info.bmi);
 }
 
