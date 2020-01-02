@@ -3,6 +3,6 @@
 A repo to store my random projects in C language
 
 ## Table of Contents
-* [BMI Calculator](./bmi_calculator) - *In progress*
-
+* [BMI Calculator](./bmi_calculator) - Completed
+* [Hangman](./hangman) - *In progress*
 * [Misc](./misc)
