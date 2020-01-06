@@ -1,5 +1,5 @@
 # C Programming - A Modern Approach 2nd Edition by K.N.King
 ## Purpose:
-    - To store programming exercises from **C Programming - A Modern Approach**
+- To store programming exercises from **C Programming - A Modern Approach**
 ## Table of Contents:
-    * [Chapter 02 - C Fundamentals](./chapter02)
+* [Chapter 02 - C Fundamentals](./chapter02)
