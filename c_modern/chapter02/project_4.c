@@ -7,11 +7,13 @@
 #include <stdio.h>
 
 int main(void) {
-    float amount;
+    float amount, amount_tax;
 
-    printf("Enter an amount: ");
+    printf("Enter an amount: $_______\b\b\b\b\b\b\b");
     scanf("%f", &amount);
 
-    printf("With tax added: %.2f\n");
+    amount_tax = amount + (amount * 0.05);
+
+    printf("With tax added: %.2f\n", amount_tax);
     return 0;
 }
