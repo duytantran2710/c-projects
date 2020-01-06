@@ -7,6 +7,7 @@
 ## Table of Contents
 * [BMI Calculator](./bmi_calculator) - Completed
 * [Hangman](./hangman) - *In progress*
+* [C Programming - A Modern Approach](./c_modern) - *In progress*
 * [Misc](./misc)
 
 ## Contributions
