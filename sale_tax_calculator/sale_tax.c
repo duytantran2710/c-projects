@@ -14,25 +14,28 @@
 
 // static variables
 static char choice;
-static StateRate user_state_rate = STATE_RATE_DB[0];
+static StateRate user_state_rate;
 
 /* Prototype */
-void print_banner();
-void print_main_menu();
+void banner();
+void main_menu();
+void print_user_state_rate();
 void select_state();
 void calculate_sale_tax();
 float convert_rate_to_decimal(float rate);
 
 
 int main(void) {
+
+    user_state_rate = STATE_RATE_DB[0];
     
-    print_main_menu();
+    main_menu();
     CLEAR_SCREEN;
     return 0;
 }
 
 /* Print program banner */
-void print_banner() {
+void banner() {
     printf("***************************************\n");
     printf("*                                     *\n");
     printf("*         SALE TAX CALCULATOR         *\n");
@@ -42,14 +45,11 @@ void print_banner() {
 }
 
 /* Prompt main menu and return user choice */
-void print_main_menu() {
+void main_menu() {
     CLEAR_SCREEN;
-    print_banner();
+    banner();
 
-    if(strcmp(user_state_rate.state, "NULL") != 0) {
-        printf("Your State: %s - Tax Rate: %.2f%%\n\n", user_state_rate.state, user_state_rate.rate);
-    }
-
+    print_user_state_rate();
     printf("1. Set Your State\n2. Calculate Sale Tax\n3. Quit\n\nSelect: ");
     scanf(" %c", &choice);
 
@@ -66,10 +66,16 @@ void print_main_menu() {
             scanf(" %c", &choice);
             if(choice == 'Y' || choice == 'y') {
                 CLEAR_SCREEN;
-                print_main_menu();
+                main_menu();
             } else
                 break;
     }
+}
+
+void print_user_state_rate() {
+    if(strcmp(user_state_rate.state, "NULL") != 0) {
+        printf("Your State: %s - Tax Rate: %.2f%%\n\n", user_state_rate.state, user_state_rate.rate);
+    }    
 }
 
 void select_state() {
@@ -77,7 +83,7 @@ void select_state() {
     int counter = 1;
 
     CLEAR_SCREEN;
-    print_banner();
+    banner();
     printf("Please select your state:\n");
     for(int i = 1; i < DB_SIZE; i++) {
         printf("%2d. %15s", i, STATE_RATE_DB[i].state);
@@ -101,11 +107,12 @@ void select_state() {
             select_state();
     }
 
-    print_main_menu();
+    main_menu();
 }
 
 void calculate_sale_tax() {
-    printf("Calculate Sale Tax\n");
+    
+
 }
 
 /* Utilities */
