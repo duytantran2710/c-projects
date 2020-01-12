@@ -1,8 +1,7 @@
 #ifndef GLOBAL_VARS_H
 #define GLOBAL_VARS_H
 
-#define DB_SIZE 53
-char choice;
+#define DB_SIZE 54
 
 typedef struct StateRate {
     char state[100];
@@ -10,9 +9,10 @@ typedef struct StateRate {
 } StateRate;
 
 const StateRate STATE_RATE_DB[DB_SIZE] = {
+    {"NULL", 0.0f}, // default value
     {"Alabama", 4.0f},{"Alaska", 0.0f},{"Arizona", 5.6f},
     {"Arkansas", 6.5f},{"California", 7.25f},{"Colorado", 2.9f},
-    {"Connecticut", 6.35f},{"Delaware", 0.0f},{"District of Columbia", 5.75f},
+    {"Columbia", 5.75f},{"Connecticut", 6.35f},{"Delaware", 0.0f},
     {"Florida", 6.0f},{"Georgia", 4.0f},{"Guam", 4.0f},
     {"Hawaii", 4.17f},{"Idaho", 6.0f},{"Illinois", 6.25f},
     {"Indiana", 7.0f},{"Iowa", 6.0f},{"Kansas", 6.5f},
