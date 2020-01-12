@@ -11,8 +11,6 @@
 #include "sale_tax.h"
 
 #define CLEAR_SCREEN system("@cls||clear")
-#define TRUE    1
-#define FALSE   0
 
 // static variables
 static char choice;
