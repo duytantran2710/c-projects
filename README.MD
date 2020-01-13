@@ -5,10 +5,13 @@
  - Sharpen my skill on C language.
 
 ## Table of Contents
-* [BMI Calculator](./bmi_calculator) - Completed
+### Completed Projects
+* [BMI Calculator](./bmi_calculator)
+* [Sale Tax Calculalor](./sale_tax_calculator)
+
+### In Progress
 * [Hangman](./hangman) - *In progress*
 * [C Programming - A Modern Approach](./c_modern) - *In progress*
-* [Sale Tax Calculalor](./sale_tax_calculator) - Completed
 * [Misc](./misc)
 
 ## Contributions
