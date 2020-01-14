@@ -7,13 +7,16 @@
 
 typedef struct Player {
     int chances;
-    char guess_word[WORD_SIZE];
+    char guess[WORD_SIZE];  // guess word
     char chosen_letter[CHOSEN_LETTER_MAX];
 } Player;
 
-Player player;
+extern Player player;
 
 // prototype
 void reset_player();
+void guess_initial(char []);
+void guess_word_letter(char);
+void print_guess();
 
 #endif
