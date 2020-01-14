@@ -6,18 +6,22 @@
 #include "game.h"
 #include "wordlist.h"
 #include "player.h"
-
+#include "stage.h"
 
 void start_game() {
-
-    _split_str_to_arr();
-
-    for(int i = 0; i < strnlen(game_word, sizeof(game_word)); i++) {
-        printf("%c ", game_word[i]);
-    }
+    _split_str_to_arr();    // pick a random word from word list and copy it to game array
+    reset_player();         // reset player's stats
 
 
-    scanf(" %c", &choice); 
+    set_stage(0);
+
+    printf("%s\n", game_word);
+
+    guess_initial(game_word);
+    print_guess();
+
+
+    scanf(" %c", &choice);
 
 }
 
