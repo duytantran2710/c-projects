@@ -11,7 +11,6 @@ typedef struct Player {
     char chosen_letter[CHOSEN_LETTER_MAX];
 } Player;
 
-
 Player player;
 
 #endif
