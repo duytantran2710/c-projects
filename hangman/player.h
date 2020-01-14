@@ -13,4 +13,7 @@ typedef struct Player {
 
 Player player;
 
+// prototype
+void reset_player();
+
 #endif

@@ -1,4 +1,6 @@
 #include "wordlist.h"
 #include "player.h"
 
-Player player = {5, {}, {}};
+void reset_player() {
+    Player player = {5, {}, {}};
+}
