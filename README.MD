@@ -8,9 +8,9 @@
 ### Completed Projects
 * [BMI Calculator](./bmi_calculator)
 * [Sale Tax Calculalor](./sale_tax_calculator)
+* [Hangman](./hangman)
 
 ### In Progress
-* [Hangman](./hangman) - *In progress*
 * [C Programming - A Modern Approach](./c_modern) - *In progress*
 * [Misc](./misc)
 
