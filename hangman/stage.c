@@ -7,21 +7,21 @@
 void set_stage(int current_stage) {
     switch(current_stage) {
         case 1:
-            _first_stage(); break;
+            _stage_1(); break;
         case 2:
-            _second_stage(); break;
+            _stage_2(); break;
         case 3:
-            _third_stage(); break;
+            _stage_3(); break;
         case 4:
-            _fourth_stage(); break;
+            _stage_4(); break;
         case 5:
-            _fifth_stage(); break;
+            _stage_5(); break;
         default:
-            _initial_stage(); break;
+            _stage_0(); break;
     }
 }
 
-static void _initial_stage() {
+static void _stage_0() {
     CLRSCR;
     printf("###################+-----------------+######################\n");
     printf("###################| CLASSIC HANGMAN |######################\n");
@@ -40,7 +40,7 @@ static void _initial_stage() {
     printf("############################################################\n");
 }
 
-static void _first_stage() {
+static void _stage_1() {
     CLRSCR;
     printf("###################+-----------------+######################\n");
     printf("###################| CLASSIC HANGMAN |######################\n");
@@ -59,7 +59,7 @@ static void _first_stage() {
     printf("############################################################\n");    
 }
 
-static void _second_stage() {
+static void _stage_2() {
     CLRSCR;
     printf("###################+-----------------+######################\n");
     printf("###################| CLASSIC HANGMAN |######################\n");
@@ -78,26 +78,7 @@ static void _second_stage() {
     printf("############################################################\n");
 }
 
-static void _third_stage() {
-    CLRSCR;
-    printf("###################+-----------------+######################\n");
-    printf("###################| CLASSIC HANGMAN |######################\n");
-    printf("###################+-----------------+######################\n");
-    printf("##                                                        ##\n");
-    printf("##  ||=======+                                            ##\n");
-    printf("##  ||       |                                            ##\n");
-    printf("##  ||       O                                            ##\n");
-    printf("##  ||      /|\\                                           ##\n");
-    printf("##  ||                                                    ##\n");
-    printf("##  ||                                                    ##\n");
-    printf("##  ||                                                    ##\n");
-    printf("##  ||=================================================== ##\n");
-    printf("##                                                        ##\n");
-    printf("############################################################\n");
-    printf("############################################################\n");
-}
-
-static void _fourth_stage() {
+static void _stage_3() {
     CLRSCR;
     printf("###################+-----------------+######################\n");
     printf("###################| CLASSIC HANGMAN |######################\n");
@@ -107,6 +88,25 @@ static void _fourth_stage() {
     printf("##  ||       |                                            ##\n");
     printf("##  ||       O                                            ##\n");
     printf("##  ||      /|\\                                           ##\n");
+    printf("##  ||                                                    ##\n");
+    printf("##  ||                                                    ##\n");
+    printf("##  ||                                                    ##\n");
+    printf("##  ||=================================================== ##\n");
+    printf("##                                                        ##\n");
+    printf("############################################################\n");
+    printf("############################################################\n");
+}
+
+static void _stage_4() {
+    CLRSCR;
+    printf("###################+-----------------+######################\n");
+    printf("###################| CLASSIC HANGMAN |######################\n");
+    printf("###################+-----------------+######################\n");
+    printf("##                                                        ##\n");
+    printf("##  ||=======+                                            ##\n");
+    printf("##  ||       |                                            ##\n");
+    printf("##  ||       O                                            ##\n");
+    printf("##  ||      /|\\                                           ##\n");
     printf("##  ||       |                                            ##\n");
     printf("##  ||                                                    ##\n");
     printf("##  ||                                                    ##\n");
@@ -116,7 +116,7 @@ static void _fourth_stage() {
     printf("############################################################\n");
 }
 
-static void _fifth_stage() {
+static void _stage_5() {
     CLRSCR;
     printf("###################+-----------------+######################\n");
     printf("###################| CLASSIC HANGMAN |######################\n");
