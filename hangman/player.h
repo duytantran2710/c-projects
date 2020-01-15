@@ -3,20 +3,24 @@
 
 #include "wordlist.h"
 
-#define CHOSEN_LETTER_MAX 26
+#define USED_LETTER_MAX 26
 
 typedef struct Player {
     int chances;
-    char guess[WORD_SIZE];  // guess word
-    char chosen_letter[CHOSEN_LETTER_MAX];
+    char guess_array[WORD_SIZE];  // guess word
+    char used_letter[USED_LETTER_MAX];
+    int used_index;
 } Player;
 
 extern Player player;
 
 // prototype
 void reset_player();
-void guess_initial(char []);
-void guess_word_letter(char);
-void print_guess();
+void init_guess_array(char []);
+void update_guess_array(char letter, int index);
+void print_guess_array();
+void print_player_chances();
+void update_used_letter(char letter);
+void print_used_letter();
 
 #endif

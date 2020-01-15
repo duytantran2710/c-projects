@@ -4,7 +4,7 @@
 #include "stage.h"
 
 
-void set_stage(int current_stage) {
+void set_game_stage(int current_stage) {
     switch(current_stage) {
         case 1:
             _stage_1(); break;

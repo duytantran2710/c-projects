@@ -3,7 +3,7 @@
 
 int current_stage;
 
-void set_stage(int);
+void set_game_stage(int);
 static void _stage_0();
 static void _stage_1();
 static void _stage_2();
