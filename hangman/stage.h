@@ -4,11 +4,11 @@
 int current_stage;
 
 void set_stage(int);
-static void _initial_stage();
-static void _first_stage();
-static void _second_stage();
-static void _third_stage();
-static void _fourth_stage();
-static void _fifth_stage();
+static void _stage_0();
+static void _stage_1();
+static void _stage_2();
+static void _stage_3();
+static void _stage_4();
+static void _stage_5();
 
 #endif
