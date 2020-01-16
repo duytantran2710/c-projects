@@ -2,4 +2,4 @@
 ## Purpose:
 - To store programming projects from **C Programming - A Modern Approach**
 ## Table of Contents:
-* [Chapter 02 - C Fundamentals](./chapter02)
+* [Chapter 02 - C Fundamentals](./chapter02) - Completed
